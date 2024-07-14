@@ -18,11 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+      </head>
       <body className="text-sm ">
         <div className="flex ">
           <Sidebar />
           <main className="relative w-full p-2">
-            <Navbar/>
+            <Navbar />
             {children}
           </main>
         </div>
