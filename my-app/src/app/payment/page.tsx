@@ -145,7 +145,7 @@ const Payment = () => {
           Payouts (22)
         </button>
         <button className="font-semibold text-[#eaeaea] bg-[#0f6eb4] rounded-full px-4 py-1">
-          Refunds (6)
+          {` Refunds (${transactions.length})`}
         </button>
       </div>
       {/* Table - top section */}
@@ -194,7 +194,9 @@ const Payment = () => {
             {currentTransactions.map((transaction, index) => (
               <tr className="border-b" key={index}>
                 <td className="px-4 py-2 text-sm font-medium text-sky-600">
-                  <Link href={`/transactions/${transaction.orderId.split("#")[1]}`}>
+                  <Link
+                    href={`/transactions/${transaction.orderId.split("#")[1]}`}
+                  >
                     {transaction.orderId}
                   </Link>
                 </td>
@@ -207,7 +209,7 @@ const Payment = () => {
                       : "text-red-500"
                   }`}
                 >
-                  {transaction.status}
+                  <span>●</span> {transaction.status}
                 </td>
                 <td className="px-4 py-2 text-sm font-normal">
                   {transaction.transactionId}
