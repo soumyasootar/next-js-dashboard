@@ -193,7 +193,7 @@ const Payment = () => {
           <tbody>
             {currentTransactions.map((transaction, index) => (
               <tr className="border-b" key={index}>
-                <td className="px-4 py-2 text-sm font-medium">
+                <td className="px-4 py-2 text-sm font-medium text-sky-600">
                   <Link href={`/transactions/${transaction.orderId.split("#")[1]}`}>
                     {transaction.orderId}
                   </Link>
