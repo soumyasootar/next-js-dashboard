@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { CiCircleQuestion } from "react-icons/ci";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { BsDownload } from "react-icons/bs";
 import Link from "next/link";
 import { transactions } from "../data/transactionData";
 import * as XLSX from "xlsx";
@@ -175,7 +176,7 @@ const Payment = () => {
               className="px-4 py-2 text-sm bg-zinc-200 rounded-md"
               onClick={downloadExcel}
             >
-              Download
+              <BsDownload/>
             </button>
           </div>
         </div>
